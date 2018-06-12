@@ -2,7 +2,7 @@
 
 ## 匹配
 - ### 匹配全部
-    * query
+    * query
     ```
     {
         "query":{
@@ -10,6 +10,7 @@
         }
     }
     ```
+    
 - ### 完全匹配
     * query
     ```
@@ -22,6 +23,7 @@
         }
     }
     ```
+
 - ### 模糊匹配
     * query
     ```
@@ -44,9 +46,11 @@
         }
     }
     ```
+
 ## 过滤器
 - ### term过滤器
     置入其他过滤器中，filter或must类的都可
+
     * query
     ```
     GET /my_store/products/_search
@@ -62,11 +66,12 @@
 
 - ### range范围过滤器
     同term：
-    >
+    ```
     gt: > 大于（greater than）
     lt: < 小于（less than）
     gte: >= 大于或等于（greater than or equal to）
     lte: <= 小于或等于（less than or equal to）
+    ```
 
     * query
     ```
@@ -85,9 +90,11 @@
         }
     }
     ```
+
 - ### bool过滤器
     复合过滤器，内部嵌套别的过滤器
-- ### must过滤器
+
+- ### must过滤器
     严格匹配
     * query
     ```
@@ -101,9 +108,10 @@
                     }
                 },
             }
-        }
+        }
     }
     ```
+
 - ### must_not
     严格不匹配
     * query
@@ -121,6 +129,7 @@
         }
     }
     ```
+    
 - ### should
     或的使用
     * query
@@ -144,6 +153,7 @@
         }
     }
     ```
+
 - ### 组合使用
     * query
     ```
@@ -171,7 +181,7 @@
 
 ## 排序
     按字段的值进行排序,可有优先级
-    * query
+   * query
 
     ```
     GET /my_index/my_type/_search
@@ -189,9 +199,10 @@
     }
     ```
 
-## 显示字段
+## 显示字段
     只显示固定字段
-    * query : 不显示
+
+   * query : 不显示
 
     ```
     GET /_search
@@ -203,7 +214,7 @@
     }
     ```
 
-    * query : 匹配字段显示
+   * query : 匹配字段显示
 
     ```
     GET /_search
@@ -215,7 +226,7 @@
     }
     ```
 
-    * query : 多个匹配字段显示
+   * query : 多个匹配字段显示
 
     ```
     GET /_search
@@ -227,7 +238,7 @@
     }
     ```
 
-    * query : 排除字段显示显示
+   * query : 排除字段显示
 
     ```
     GET /_search
