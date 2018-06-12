@@ -80,12 +80,12 @@
     {
         "query" : {
             "filter" : {
-                "range" : {
+                {"range" : {
                     "price" : {
                         "gte" : 20,
                         "lt"  : 40
                     }
-                }, 
+                }}, 
                 { "term" : {"productID" : "XHDK-A-1293-#fJ3"}} 
             }
         }
